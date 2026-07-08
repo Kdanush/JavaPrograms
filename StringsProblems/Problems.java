@@ -21,19 +21,28 @@ public class Problems {
         
         // String one = sc.nextLine();
         // String two = sc.nextLine();
-        String one = "Tony";
-        String two = "Tony";
+        // String one = "Tony";
+        // String two = "Tony";
 
 
-        if(one.compareTo(two) == 0){
-            System.out.println("both strings are same ");
-        }  
-        if(one == two){
-            System.out.println("both strings are same ");
-        } 
-        if(new String("Tony")!= new String("Tony") ){
-            System.out.println("Bothstring objects are not equal");
-        } 
+        // if(one.compareTo(two) == 0){ // 
+        //     System.out.println("both strings are same ");
+        // }  
+        // if(one == two){ // 
+        //     System.out.println("both strings are same ");
+        // } 
+        // if(new String("Tony")!= new String("Tony") ){
+        //     System.out.println("Bothstring objects are not equal");
+        // } 
+        // System.out.println(s.substring());
+
+        // String s = "123";
+        // int n = Integer.parseInt(s);
+        // System.out.println(n);
+
+        int n = 5;
+        String s = Integer.toString(n);
+        System.out.println(s.length());
         sc.close();
     }
     
