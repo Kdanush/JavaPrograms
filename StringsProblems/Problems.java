@@ -8,20 +8,33 @@ public class Problems {
         // System.out.println(s);
 
         //concatination
-        String firstName ,secondName ;
-        firstName=sc.nextLine();
-        secondName=sc.nextLine();
-        var fullName = firstName+secondName;
-        System.out.println(fullName);
-        System.out.println(fullName.length());
-        for(int i=0;i<fullName.length();i++){
-            System.out.print(fullName.charAt(i) + " ");
-        }        
+        // String firstName ,secondName ;
+        // firstName=sc.nextLine();
+        // secondName=sc.nextLine();
+        // var fullName = firstName+secondName;
+        // System.out.println(fullName);
+        // System.out.println(fullName.length());
+        // //printing each character in String
+        // for(int i=0;i<fullName.length();i++){
+        //     System.out.print(fullName.charAt(i) + " ");
+        // }  
         
-        
-        
-        sc.close();
+        // String one = sc.nextLine();
+        // String two = sc.nextLine();
+        String one = "Tony";
+        String two = "Tony";
 
+
+        if(one.compareTo(two) == 0){
+            System.out.println("both strings are same ");
+        }  
+        if(one == two){
+            System.out.println("both strings are same ");
+        } 
+        if(new String("Tony")!= new String("Tony") ){
+            System.out.println("Bothstring objects are not equal");
+        } 
+        sc.close();
     }
     
 }
