@@ -30,11 +30,47 @@ public static boolean isPalindrome(int n){
         return false;
     }
 }
+
+public static int gcdOfTwoNumMethod(int a , int b){//using brute force
+    int gcd = 1;
+    for(int i =1; i<=Math.min(a,b);i++){
+            if(a%i==0 && b%i==0){
+                gcd =i;
+            }
+        }
+    return gcd;
+}
+
+public static int fingGCD(int a , int b){//using brute force better approach
+    for(int i =Math.min(a,b); i>=1;i--){
+            if(a%i==0 && b%i==0){
+                return i;
+            }
+        }
+    return 1;
+}
+
+public static int gcdEcludien(int a , int b){//optimal appraoch
+
+    while(a>0 && b >0){
+        if(a>b){
+            a=a%b;
+        }
+        else{
+            b=b%a;
+        }
+    }
+    if(a==0){
+        return b;
+    }
+    return a;
+}
     public static void main(String [] args){
         Scanner sc= new Scanner(System.in);
         int n = sc.nextInt();
+        int n2 = sc.nextInt();
         sc.close();
-        System.out.println(isPalindrome(n));
+        System.out.println(gcdEcludien(n,n2));
    }
     
 }
