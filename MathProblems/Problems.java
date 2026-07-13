@@ -65,12 +65,82 @@ public static int gcdEcludien(int a , int b){//optimal appraoch
     }
     return a;
 }
-    public static void main(String [] args){
+
+public static boolean checkArmStrong(int a){
+    int temp =a;
+    int temp2=a;
+    int res=0,size =0;
+    while(temp>0){
+        size++;
+        temp=temp/10;
+    }
+    while (temp2>0) {
+        int dig = temp2%10;
+        res=res+Math.powExact(dig,size);
+        temp2=temp2/10;
+    }
+
+    if(a == res){
+        return true;
+    }
+    return false;
+}
+
+public static List<Integer> printDivisors(int a){
+    //bruteforce
+    List<Integer> res = new ArrayList<>();
+    for(int i = 1; i<=a;i++){
+        if(a%i==0){
+            res.add(i);
+        }
+    }
+    return res;
+}
+ 
+public static List<Integer> printDivisorOpt(int a){
+    //bruteforce
+    List<Integer> res = new ArrayList<>();
+    for(int i = 1; i<=Math.sqrt(a);i++){
+        if(a%i==0){
+            res.add(i);
+            if(i!=(a/i)){
+                res.add(a/i);
+            }
+        }
+    }
+    return res;
+}
+
+public static boolean checkIsPrime(int a){
+    int cnt =0; //Bryte force
+    for(int i = 1;i<=a;i++){
+        if(a%i==0){
+            cnt++;
+        }
+    }
+    return cnt==2;
+}
+
+public static boolean isPrime(int a){//optimal approah
+    int cnt =0; 
+    for(int i = 1;i<=Math.sqrt(a);i++){
+        if(a%i==0){
+            cnt++;
+            if(a/i != i){
+                cnt++;
+            }
+        }
+    }
+    return cnt==2;
+}
+
+
+public static void main(String [] args){
         Scanner sc= new Scanner(System.in);
         int n = sc.nextInt();
-        int n2 = sc.nextInt();
+        // int n2 = sc.nextInt();
         sc.close();
-        System.out.println(gcdEcludien(n,n2));
+        System.out.println(isPrime(n));
    }
     
 }
