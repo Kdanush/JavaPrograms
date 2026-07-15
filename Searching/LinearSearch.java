@@ -3,12 +3,10 @@ import java.util.Scanner;
 
 public class LinearSearch {
     //creating a method
-public static int linearSearch(int []a,int tar){
-    int flag =0;
+public static int linearSearch(int []a,int tar){ 
     int loc =-1;
     for(int i =0;i<a.length;i++){
-        if(a[i]==tar){
-            flag =1;
+        if(a[i]==tar){ 
             loc=i;
             break;
         }
